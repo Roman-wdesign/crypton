@@ -5,6 +5,7 @@
     >
       <div class="card">
         <p> name: {{ person.name }}</p>
+        <button v-on:click="counter += 1">+1</button>
       </div>
     </div>
   </div>
@@ -34,10 +35,13 @@ import axios from 'axios'
 export default {
   name: "Main",
   data: () => ({
+    counter: 0,
     people: [],
     id: Number,
 
   }),
+  props: {},
+
   methods: {
     loadPeople() {
       axios.get('https://swapi.dev/api/people/')
@@ -94,8 +98,8 @@ export default {
 .card {
   margin: 10px;
   padding: 10px;
-  height: 60px;
-  width: 100px;
+  height: 70px;
+  width: 200px;
   background-color: #ead949;
 }
 </style>
