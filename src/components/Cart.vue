@@ -1,10 +1,10 @@
 <template>
-<p>Favorite heroes will be here soon</p>
+  <p>Favorite heroes will be here soon</p>
 </template>
 
 <script>
 export default {
-  name: "FavoriteHeroes"
+  name: "Cart"
 }
 </script>
 

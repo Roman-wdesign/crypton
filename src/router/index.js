@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Main from "../components/Main";
-import FavoriteHeroes from "../components/FavoriteHeroes";
+import Cart from "../components/Cart";
 
 Vue.use(VueRouter)
 
@@ -18,9 +18,9 @@ const routes = [
     component: Main
   },
   {
-    path: '/FavoriteHeroes',
-    name: 'FavoriteHeroes',
-    component: FavoriteHeroes
+    path: '/Cart',
+    name: 'Cart',
+    component: Cart
   },
   {
     path: '/about',
