@@ -9,7 +9,7 @@
       </div>
       <div class="img"
            style=" width: 20px;height: 20px;"
-      ><img :src="images">
+      ><img :src="people.data">
       </div>
     </div>
   </div>
@@ -18,7 +18,21 @@
 <script>
 import axios from 'axios'
 
+let urls = [
+  'https://starwars-visualguide.com/assets/img/characters/1.jpg',
+  'https://starwars-visualguide.com/assets/img/characters/2.jpg',
+  'https://starwars-visualguide.com/assets/img/characters/3.jpg',
+  'https://starwars-visualguide.com/assets/img/characters/4.jpg',
+  'https://starwars-visualguide.com/assets/img/characters/5.jpg',
+  'https://starwars-visualguide.com/assets/img/characters/6.jpg',
+  'https://starwars-visualguide.com/assets/img/characters/7.jpg',
+  'https://starwars-visualguide.com/assets/img/characters/8.jpg',
+  'https://starwars-visualguide.com/assets/img/characters/9.jpg',
+  'https://starwars-visualguide.com/assets/img/characters/10.jpg'
 
+
+];
+let requests = urls.map(url => axios.get(url));
 
 
 export default {
@@ -28,7 +42,6 @@ export default {
     people: [],
     id: Number,
     images: [],
-    image:String
 
 
   }),
@@ -56,11 +69,12 @@ export default {
           })
     },
     loadImages() {
-      axios.get('https://starwars-visualguide.com/assets/img/characters/1.jpg')
+      Promise.all(requests)
           .then(response => {
             console.log(this.images = response)
+            return response;
           })
-          .finally(() => console.log('%cData people loading is complete', 'background: #183CA8FF; color: #FFFFFFFF'))
+          .finally(() => console.log('%cData images loading is complete', 'background: #183CA8FF; color: #FFFFFFFF'))
           .catch(function (error) {
             if (error.response) {
               console.log(error.response.data);
