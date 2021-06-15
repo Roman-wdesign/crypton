@@ -1,8 +1,8 @@
 <template>
-  <main>
-    <Catalog/>
-    <Cart/>
-  </main>
+<main>
+  <Catalog/>
+  <Cart/>
+</main>
 </template>
 
 <script>
@@ -12,11 +12,14 @@ import Catalog from "./Catalog"
 
 export default {
   name: "Main",
-  components: {
+  components:{
     Cart,
     Catalog
   },
-  data: () => ({}),
+  data: () => ({
+
+  }),
+
 
 
   watch: {},

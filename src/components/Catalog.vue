@@ -1,22 +1,16 @@
 <template>
   <div class="container">
-    <div class="currency" v-for="(person, id) in people"
-         :key="id"
+    <p>All heroes</p>
+    <div class="currency"
     >
-      <CatalogItem/>
-      <div class="card"  >
-        <div> {{ person.name }}
-          <div class="img">
-            <img style=" width: 50px;height: 60px;" :src="require('../assets/images/1.jpg')"/>
-          </div>
-        </div>
-        <button v-on:click="counter += 1">
-          <div class="favorite"><span class="material-icons md-18">favorite</span></div>
-        </button>
-
-      </div>
+      <CatalogItem
+          v-for="(person, id) in people"
+          :key="id"
+          :name="person.name"
+          :hero_data="person"/>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -30,18 +24,18 @@ export default {
     counter: 0,
     people: [],
     id: Number,
-    images: [
-      {article: '1', image: "1.jpg"},
-      {article: '2', image: "2.jpg"},
-      {article: '3', image: "3.jpg"},
-      {article: '4', image: "4.jpg"},
-      {article: '5', image: "5.jpg"},
-      {article: '6', image: "6.jpg"},
-      {article: '7', image: "7.jpg"},
-      {article: '8', image: "8.jpg"},
-      {article: '9', image: "9.jpg"},
-      {article: '10', image: "10.jpg"}
-    ]
+    // images: [
+    //   {article: '1', image: "1.jpg"},
+    //   {article: '2', image: "2.jpg"},
+    //   {article: '3', image: "3.jpg"},
+    //   {article: '4', image: "4.jpg"},
+    //   {article: '5', image: "5.jpg"},
+    //   {article: '6', image: "6.jpg"},
+    //   {article: '7', image: "7.jpg"},
+    //   {article: '8', image: "8.jpg"},
+    //   {article: '9', image: "9.jpg"},
+    //   {article: '10', image: "10.jpg"}
+    // ]
   }),
   methods: {
     loadPeople() {
@@ -73,6 +67,8 @@ export default {
 </script>
 
 <style lang="scss">
+
+
 .container {
   display: flex;
   align-items: center;
@@ -89,8 +85,8 @@ export default {
   //color: #b7d02c;
   margin: 10px;
   padding: 10px;
-  height: 7rem;
-  width: 12rem;
+  height: 70px;
+  width: 200px;
   background-color: #ead949;
 }
 </style>
