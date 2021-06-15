@@ -8,6 +8,7 @@
           :key="id"
           :name="person.name"
           :hero_data="person"/>
+
     </div>
   </div>
 

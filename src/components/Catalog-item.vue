@@ -1,6 +1,7 @@
 <template>
   <div class="item__catalog">
     <div class="item__catalog-card">
+      <p> name: {{ hero_data.name}}</p>
       <p class="item__catalog__name">Catalog item</p>
       <div class="img">
         <img style=" width: 50px;height: 60px;" :src="require('../assets/images/1.jpg')"/>
