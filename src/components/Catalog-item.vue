@@ -1,13 +1,17 @@
 <template>
   <div class="item__catalog">
     <div class="item__catalog-card">
-      <p class="item__catalog__name">Hero</p>
-      <p>  {{ hero_data.name}}</p>
+      <p> {{ hero_data.name }}</p>
       <div class="img">
-        <img style=" width: 50px;height: 60px;" :src="require('../assets/images/1.jpg')"/>
+        <img style=" width: 50px;height: 70px;" :src="'https://starwars-visualguide.com/assets/img/characters/1.jpg' " alt="img"/>
       </div>
-      <button class="item__catalog__add_btn btn">
-        <div class="favorite"><span class="material-icons md-18">favorite</span></div>
+      <button
+          class="item__catalog__add_btn btn"
+          @click="addFavoriteHero"
+      >
+
+        <span class="material-icons md-18">favorite</span>
+
       </button>
     </div>
   </div>
@@ -25,29 +29,24 @@ export default {
         return {}
       }
     },
+  },
 
-  },
-  data() {
-    return {}
-  },
-  computed:{},
+  data: () => ({}),
+  computed: {},
+  methods: {
+    addFavoriteHero() {
+      this.$emit('addHero', this.hero_data.name)
+    }
+  }
 
 }
 </script>
 
 <style lang="scss" scoped>
-.item__catalog {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+
 
 .item__catalog-card {
-  margin: 10px;
-  padding: 10px;
-  height: 7rem;
-  width: 12rem;
+  padding: 10px 0;
   background-color: #ead949;
 }
 

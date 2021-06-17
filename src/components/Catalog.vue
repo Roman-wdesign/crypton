@@ -1,13 +1,16 @@
 <template>
   <div class="container">
     <p>All heroes</p>
-    <div class="currency"
+    <div class="container-currency"
     >
       <CatalogItem
           v-for="(person, id) in people"
           :key="id"
           :name="person.name"
-          :hero_data="person"/>
+          :hero_data="person"
+          @addHero="showChildAddedHeroInConsole"
+      ></CatalogItem>
+
     </div>
   </div>
 
@@ -23,19 +26,8 @@ export default {
   data: () => ({
     counter: 0,
     people: [],
-    id: Number,
-    // images: [
-    //   {article: '1', image: "1.jpg"},
-    //   {article: '2', image: "2.jpg"},
-    //   {article: '3', image: "3.jpg"},
-    //   {article: '4', image: "4.jpg"},
-    //   {article: '5', image: "5.jpg"},
-    //   {article: '6', image: "6.jpg"},
-    //   {article: '7', image: "7.jpg"},
-    //   {article: '8', image: "8.jpg"},
-    //   {article: '9', image: "9.jpg"},
-    //   {article: '10', image: "10.jpg"}
-    // ]
+    id: String,
+    image: String,
   }),
   methods: {
     loadPeople() {
@@ -58,35 +50,25 @@ export default {
             console.log(error.config);
           })
     },
+    showChildAddedHeroInConsole(data) {
+      console.log(data)
+    }
 
   },
   mounted() {
     this.loadPeople();
+
   },
 }
 </script>
 
 <style lang="scss">
 
-
-.container {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
+.container-currency{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  gap: 10px
 }
 
-.currency {
-  margin: 0 10px;
-  display: flex;
-}
-
-.card {
-  //color: #b7d02c;
-  margin: 10px;
-  padding: 10px;
-  height: 70px;
-  width: 200px;
-  background-color: #ead949;
-}
 </style>
