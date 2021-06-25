@@ -2,9 +2,10 @@
   <div class="item__catalog">
     <div class="item__catalog-card">
       <p> {{ hero_data.name }}</p>
+      <p> gender: <strong>{{ hero_data.gender }}</strong> </p>
 
       <div class="img">
-        <img style=" width: 50px;height: 70px;" :src="'https://starwars-visualguide.com/assets/img/characters/4.jpg'" alt="img"/>
+        <img style="width: 50px;height: 70px;" :src="hero_data.picture" alt="img"/>
       </div>
       <button
           class="item__catalog__add_btn btn"
