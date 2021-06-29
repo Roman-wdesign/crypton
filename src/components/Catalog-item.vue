@@ -65,8 +65,8 @@ export default {
 
 <style lang="scss" scoped>
 .item__catalog-img {
-  width: 50px;
-  height: 70px
+  width: 5rem;
+  height: 7rem
 }
 
 p {

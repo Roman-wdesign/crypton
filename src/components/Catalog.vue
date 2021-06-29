@@ -71,9 +71,11 @@ export default {
 
 .container-currency {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 200px);
-  gap: 10px
+  grid-template-columns: repeat( auto-fill, minmax(12rem, 1fr));
+  grid-template-rows: repeat(5, 250px);
+  gap: 10px;
+  flex-wrap: wrap;
+
 }
 
 </style>
