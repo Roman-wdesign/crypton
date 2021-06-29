@@ -6,12 +6,13 @@ description: Vue + SWAPI
 
 ### Details
 
-* images to people from [https://starwars-visualguide.com/\#/](https://starwars-visualguide.com/#/)
-* example image link [https://starwars-visualguide.com/assets/img/characters/1.jpg](https://starwars-visualguide.com/assets/img/characters/1.jpg)
-* search
-* adding favorite heroes
-* localStorage
-* pagination
+* Axios
+* Images to people from [https://starwars-visualguide.com/\#/](https://starwars-visualguide.com/#/)
+* Example image link [https://starwars-visualguide.com/assets/img/characters/1.jpg](https://starwars-visualguide.com/assets/img/characters/1.jpg)
+* Search
+* Adding favorite heroes
+* Save to localStorage
+* Pagination
 
 ![Result](.gitbook/assets/screenshot_1.png)
 
