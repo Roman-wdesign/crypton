@@ -78,7 +78,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 1rem 0;
   background-color: #ead949;
 }
 

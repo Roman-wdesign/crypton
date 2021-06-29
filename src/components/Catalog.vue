@@ -26,10 +26,9 @@ export default {
   name: "Catalog",
   components: {CatalogItem},
   data: () => ({
-    counter: 0,
     people: [],
     id: String,
-    gender: '',
+    gender: String,
 
   }),
   methods: {
@@ -72,7 +71,7 @@ export default {
 .container-currency {
   display: grid;
   grid-template-columns: repeat( auto-fill, minmax(12rem, 1fr));
-  grid-template-rows: repeat(5, 250px);
+  grid-template-rows: repeat(5, 15rem);
   gap: 10px;
   flex-wrap: wrap;
 
