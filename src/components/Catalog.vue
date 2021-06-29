@@ -12,8 +12,6 @@
           :hero_data="person"
           @addHero="showChildAddedHeroInConsole"
       />
-
-
     </div>
   </div>
 
@@ -30,6 +28,7 @@ export default {
   data: () => ({
     counter: 0,
     people: [],
+    planets:[],
     id: String,
     image: String,
     gender: '',
@@ -37,12 +36,12 @@ export default {
   }),
   methods: {
     async loadPeople() {
-      const urlPeople = 'https://swapi.dev/api/people/'
+      const urlMain = 'https://swapi.dev/api'
+
       try {
-        const response = await axios.get(urlPeople)
+        const response = await axios.get(urlMain + '/people')
             .then(response => {
               console.log(this.people = response.data.results)
-
             })
             .finally(() => console.log('%cData people loading is complete', 'background: #0096d3; color: #FFFFFFFF'))
             .catch(function (error) {
@@ -59,10 +58,9 @@ export default {
             })
         console.log(response)
       } catch (e) {
-        console.error(e); // 💩
+        console.error(e);
       }
     },
-
     showChildAddedHeroInConsole(data) {
       console.log(data)
     }
