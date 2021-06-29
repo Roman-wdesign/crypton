@@ -4,6 +4,15 @@ description: Vue + SWAPI
 
 # crypton
 
+### Details
+
+* images to people from [https://starwars-visualguide.com/\#/](https://starwars-visualguide.com/#/)
+* example image link [https://starwars-visualguide.com/assets/img/characters/1.jpg](https://starwars-visualguide.com/assets/img/characters/1.jpg)
+* search
+* adding favorite heroes
+* localStorage
+* pagination
+
 ![Result](.gitbook/assets/screenshot_1.png)
 
 ## Project setup
