@@ -71,7 +71,7 @@ export default {
 
 p {
   margin: 0;
-  padding: 0;
+  padding: 3px 0;
 }
 
 .item__catalog-card {

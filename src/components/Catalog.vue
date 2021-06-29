@@ -1,6 +1,8 @@
 <template>
   <div class="container">
+
     <p>All heroes</p>
+
     <div class="container-currency"
     >
 
@@ -12,9 +14,9 @@
           :hero_data="person"
           @addHero="showChildAddedHeroInConsole"
       />
+
     </div>
   </div>
-
 </template>
 
 <script>
