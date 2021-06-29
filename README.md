@@ -4,7 +4,7 @@ description: Vue + SWAPI
 
 # crypton
 
-![](.gitbook/assets/screenshot_1.png)
+![Result](.gitbook/assets/screenshot_1.png)
 
 ## Project setup
 
