@@ -13,6 +13,7 @@ description: Vue + SWAPI
 * Adding favorite heroes
 * Save to localStorage
 * Pagination
+* VueX
 
 ![Result](.gitbook/assets/screenshot_1.png)
 
