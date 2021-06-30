@@ -43,7 +43,6 @@
 export default {
   name: "Catalog-item",
   props: {
-    urls: String,
     hero_data: {
       type: Object,
       default() {

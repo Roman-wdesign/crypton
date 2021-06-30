@@ -7,7 +7,7 @@
     >
 
       <CatalogItem
-          v-for="(person, id) in people"
+          v-for="(person, id) in PEOPLE"
           :key="id"
           :name="person.name"
           :gender="person.gender"
@@ -21,50 +21,34 @@
 
 <script>
 import CatalogItem from './Catalog-item'
-import axios from "axios";
+import {mapActions, mapGetters} from 'vuex'
 
 
 export default {
   name: "Catalog",
   components: {CatalogItem},
   data: () => ({
-    people: [],
-    id: String,
-    gender: String,
 
   }),
   methods: {
+    ...mapActions([
+      'GET_PEOPLE_FROM_API'
+    ]),
 
-    loadPeople() {
 
-      const urlMain = 'https://swapi.dev/api'
-
-      axios.get(urlMain + '/people')
-          .then(response => {
-            console.log(this.people = response.data.results)
-          })
-          .finally(() => console.log('%cData people loading is complete', 'background: #0096d3; color: #FFFFFFFF'))
-          .catch(function (error) {
-            if (error.response) {
-              console.log(error.response.data);
-              console.log(error.response.status);
-              console.log(error.response.headers);
-            } else if (error.request) {
-              console.log(error.request);
-            } else {
-              console.log('Error', error.message);
-            }
-            console.log(error.config);
-          })
-    },
     showChildAddedHeroInConsole(data) {
       console.log(data)
     }
   },
   mounted() {
-    this.loadPeople();
+    this.GET_PEOPLE_FROM_API();
+
   },
-  computed: {}
+  computed: {
+    ...mapGetters([
+        'PEOPLE'
+    ]),
+  }
 }
 </script>
 
