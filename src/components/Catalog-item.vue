@@ -55,7 +55,7 @@ export default {
   computed: {},
   methods: {
     addFavoriteHero() {
-      this.$emit('addHero', this.hero_data.name)
+      this.$emit('addFavoriteHero', this.hero_data)
     }
   }
 

@@ -18,8 +18,8 @@ const routes = [
     component: Main
   },
   {
-    path: '/Cart',
-    name: 'Cart',
+    path: '/Favorite Heroes',
+    name: 'Favorite Heroes',
     component: Cart
   },
   {

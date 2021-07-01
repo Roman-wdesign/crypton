@@ -12,7 +12,7 @@
           :name="person.name"
           :gender="person.gender"
           :hero_data="person"
-          @addHero="showChildAddedHeroInConsole"
+          @addFavoriteHero="addFavoriteHero"
       />
 
     </div>
@@ -20,24 +20,23 @@
 </template>
 
 <script>
-import CatalogItem from './Catalog-item'
-import {mapActions, mapGetters} from 'vuex'
+import CatalogItem from "./Catalog-item"
+import {mapActions, mapGetters} from "vuex"
 
 
 export default {
   name: "Catalog",
   components: {CatalogItem},
-  data: () => ({
-
-  }),
+  data: () => ({}),
   methods: {
     ...mapActions([
-      'GET_PEOPLE_FROM_API'
+      'GET_PEOPLE_FROM_API',
+      'ADD_FAVORITE_HERO'
     ]),
 
 
-    showChildAddedHeroInConsole(data) {
-      console.log(data)
+    addFavoriteHero(data) {
+      this.ADD_FAVORITE_HERO(data)
     }
   },
   mounted() {
@@ -46,7 +45,7 @@ export default {
   },
   computed: {
     ...mapGetters([
-        'PEOPLE'
+      'PEOPLE'
     ]),
   }
 }

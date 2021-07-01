@@ -7,13 +7,16 @@ Vue.use(Vuex);
 let store = new Vuex.Store({
     state: {
         people: [],
+        cart:[],
         id: String,
         gender: String,
-
     },
     mutations: {
         SET_PEOPLE_TO_STATE: (state, people) => {
             state.people = people;
+        },
+        SET_PERSON:(state, person) => {
+            state.cart.push(person)
         }
     },
     actions: {
@@ -39,11 +42,18 @@ let store = new Vuex.Store({
                     }
                     console.log(error.config);
                 })
+        },
+
+        ADD_FAVORITE_HERO({commit}, person){
+            commit('SET_PERSON', person)
         }
     },
     getters: {
         PEOPLE(state) {
             return state.people;
+        },
+        CART(state){
+            return state.cart
         }
     }
 })
