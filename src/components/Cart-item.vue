@@ -43,16 +43,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.cart-item {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-
-  &__catalog-img {
-    width: 5rem;
-    height: 7rem
-  }
-}
+<style lang="scss">
 </style>

@@ -52,14 +52,4 @@ export default {
 </script>
 
 <style lang="scss">
-
-.container-currency {
-  display: grid;
-  grid-template-columns: repeat( auto-fill, minmax(12rem, 1fr));
-  grid-template-rows: repeat(5, 15rem);
-  gap: 10px;
-  flex-wrap: wrap;
-
-}
-
 </style>

@@ -1,0 +1,14 @@
+.cart-item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &__catalog-img {
+    max-width: 5rem;
+    max-height: 7rem;
+    box-shadow: 0 0 8px 0 #e0e0e0;
+    padding: $padding*2;
+    margin-bottom: $margin*2;
+  }
+}

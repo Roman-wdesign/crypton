@@ -62,23 +62,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.item__catalog-img {
-  width: 5rem;
-  height: 7rem
-}
-
-p {
-  margin: 0;
-  padding: 3px 0;
-}
-
-.item__catalog-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem 0;
-  background-color: #ead949;
-}
-
+<style lang="scss">
 </style>

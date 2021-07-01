@@ -1,15 +1,16 @@
 @import "var";
+@import "modules/cart";
+@import "modules/catalog";
+@import "modules/buttons";
 
-.btn {
-  margin: 0 $margin;
-  padding: $padding $padding*2;
-  background: $green-bg;
-  color: #ffffff;
-  border: 0;
-  border-radius: $radius;
-  outline: none;
-  cursor: pointer;
-  &:hover {
-    background: $green-bg-hover;
-  }
+
+
+.container-currency {
+  display: grid;
+  grid-template-columns: repeat( auto-fill, minmax(12rem, 1fr));
+  grid-template-rows: repeat(5, 15rem);
+  gap: 10px;
+  flex-wrap: wrap;
+
 }
+
