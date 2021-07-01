@@ -11,7 +11,7 @@ description: Vue + SWAPI
 * Images to people from [https://starwars-visualguide.com/\#/](https://starwars-visualguide.com/#/)
 * Example image link [https://starwars-visualguide.com/assets/img/characters/1.jpg](https://starwars-visualguide.com/assets/img/characters/1.jpg)
 * Search
-* Adding favorite heroes
+* Adding favorite heroes \(with quantity\)
 * Save to localStorage
 * Pagination
 * VueX
