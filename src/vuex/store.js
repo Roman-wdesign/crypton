@@ -17,6 +17,9 @@ let store = new Vuex.Store({
         },
         SET_PERSON:(state, person) => {
             state.cart.push(person)
+        },
+        REMOVE_FROM_CART:(state, index) =>{
+            state.cart.splice(index, 1)
         }
     },
     actions: {
@@ -46,6 +49,9 @@ let store = new Vuex.Store({
 
         ADD_FAVORITE_HERO({commit}, person){
             commit('SET_PERSON', person)
+        },
+        DELETE_FROM_CART({commit}, index){
+            commit('REMOVE_FROM_CART', index)
         }
     },
     getters: {

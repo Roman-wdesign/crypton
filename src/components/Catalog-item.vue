@@ -57,7 +57,8 @@ export default {
     addFavoriteHero() {
       this.$emit('addFavoriteHero', this.hero_data)
     }
-  }
+  },
+
 
 }
 </script>

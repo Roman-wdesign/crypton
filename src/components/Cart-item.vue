@@ -24,8 +24,11 @@
       <img class="cart-item__catalog-img" v-if="favorite_item_data.name === 'Obi-Wan Kenobi'"
            :src="'https://starwars-visualguide.com/assets/img/characters/10.jpg'" alt="img"/>
     </div>
-    <div class="cart-item__quantity"></div>
-    <button>Delete hero from favorite</button>
+    <div class="cart-item__quantity">
+      <p>qty</p>
+      <strong>{{ favorite_item_data.quantity }}</strong>
+    </div>
+    <button @click="deleteFromCart">Delete hero from favorite</button>
   </div>
 </template>
 
@@ -39,6 +42,14 @@ export default {
         return {};
       }
     }
+  },
+  methods:{
+    deleteFromCart(){
+this.$emit('deleteFromCart')
+    }
+  },
+  mounted() {
+    this.$set(this.favorite_item_data, 'quantity', 1)
   }
 }
 </script>
