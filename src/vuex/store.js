@@ -7,21 +7,40 @@ Vue.use(Vuex);
 let store = new Vuex.Store({
     state: {
         people: [],
-        cart:[],
+        cart: [],
         id: String,
         gender: String,
     },
+
     mutations: {
+
         SET_PEOPLE_TO_STATE: (state, people) => {
             state.people = people;
         },
-        SET_PERSON:(state, person) => {
-            state.cart.push(person)
+
+        SET_PERSON: (state, person) => {
+            if (state.cart.length) {
+                let isPeopleExist = false;
+                state.cart.map(function (item) {
+                    if (item.name === person.name) {
+                        isPeopleExist = true;
+                        item.quantity++
+                    }
+                })
+                if (!isPeopleExist) {
+                    state.cart.push(person)
+                }
+            } else {
+                state.cart.push(person)
+            }
+
         },
-        REMOVE_FROM_CART:(state, index) =>{
+
+        REMOVE_FROM_CART: (state, index) => {
             state.cart.splice(index, 1)
         }
     },
+
     actions: {
         GET_PEOPLE_FROM_API({commit}) {
             const urlMain = 'https://swapi.dev/api'
@@ -47,18 +66,19 @@ let store = new Vuex.Store({
                 })
         },
 
-        ADD_FAVORITE_HERO({commit}, person){
+        ADD_FAVORITE_HERO({commit}, person) {
             commit('SET_PERSON', person)
         },
-        DELETE_FROM_CART({commit}, index){
+        DELETE_FROM_CART({commit}, index) {
             commit('REMOVE_FROM_CART', index)
         }
     },
+
     getters: {
         PEOPLE(state) {
             return state.people;
         },
-        CART(state){
+        CART(state) {
             return state.cart
         }
     }
