@@ -2,6 +2,17 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from "axios";
 
+import {SET_PEOPLE_TO_STATE} from './mutation-types'
+import {SET_PERSON} from './mutation-types'
+import {REMOVE_FROM_CART} from './mutation-types'
+
+import {GET_PEOPLE_FROM_API} from './mutation-types'
+import {ADD_FAVORITE_HERO} from './mutation-types'
+import {DELETE_FROM_CART} from './mutation-types'
+
+import {PEOPLE} from './mutation-types'
+import {CART} from './mutation-types'
+
 Vue.use(Vuex);
 
 let store = new Vuex.Store({
@@ -14,11 +25,11 @@ let store = new Vuex.Store({
 
     mutations: {
 
-        SET_PEOPLE_TO_STATE: (state, people) => {
+        [SET_PEOPLE_TO_STATE]: (state, people) => {
             state.people = people;
         },
 
-        SET_PERSON: (state, person) => {
+        [SET_PERSON]: (state, person) => {
             if (state.cart.length) {
                 let isPeopleExist = false;
                 state.cart.map(function (item) {
@@ -36,13 +47,13 @@ let store = new Vuex.Store({
 
         },
 
-        REMOVE_FROM_CART: (state, index) => {
+        [REMOVE_FROM_CART]: (state, index) => {
             state.cart.splice(index, 1)
         }
     },
 
     actions: {
-        GET_PEOPLE_FROM_API({commit}) {
+        [GET_PEOPLE_FROM_API]({commit}) {
             const urlMain = 'https://swapi.dev/api'
             return axios(urlMain + '/people', {
                 method: 'GET'
@@ -66,19 +77,19 @@ let store = new Vuex.Store({
                 })
         },
 
-        ADD_FAVORITE_HERO({commit}, person) {
+        [ADD_FAVORITE_HERO]({commit}, person) {
             commit('SET_PERSON', person)
         },
-        DELETE_FROM_CART({commit}, index) {
+        [DELETE_FROM_CART]({commit}, index) {
             commit('REMOVE_FROM_CART', index)
         }
     },
 
     getters: {
-        PEOPLE(state) {
+        [PEOPLE](state) {
             return state.people;
         },
-        CART(state) {
+        [CART](state) {
             return state.cart
         }
     }

@@ -1,6 +1,6 @@
 <template>
   <div class="catalog">
-    <div class="catalog__link_to_cart">All Favorite Heroes:{{CART.length}}</div>
+    <div class="catalog__link_to_cart">All Favorite Heroes: <strong>{{ CART.length }}</strong></div>
     <div class="container-currency"
     >
 
