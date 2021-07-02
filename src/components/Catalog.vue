@@ -1,8 +1,6 @@
 <template>
-  <div class="container">
-
-    <p>All heroes</p>
-
+  <div class="catalog">
+    <div class="catalog__link_to_cart">All Favorite Heroes:{{CART.length}}</div>
     <div class="container-currency"
     >
 
@@ -45,7 +43,8 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'PEOPLE'
+      'PEOPLE',
+      'CART'
     ]),
   }
 }

@@ -20,7 +20,8 @@ const routes = [
   {
     path: '/Favorite Heroes',
     name: 'Favorite Heroes',
-    component: Cart
+    component: Cart,
+    props: true
   },
   {
     path: '/about',

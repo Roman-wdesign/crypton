@@ -1,5 +1,6 @@
 <template>
   <main>
+    <router-view></router-view>
     <Catalog/>
     <Cart
         v-if="CART.length"
