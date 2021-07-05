@@ -1,6 +1,9 @@
 <template>
   <div class="cart">
-    <p>Cart</p>
+    <router-link :to="{name: 'Main'}">
+      <div class="catalog__link_to_cart">Back to catalog</div>
+    </router-link>
+    <p v-if="!favorite_data.length">There are no heroes still...</p>
     <cart-item
         v-for="(person, index) in favorite_data"
         :key="person.name"

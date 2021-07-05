@@ -1,6 +1,9 @@
 <template>
   <div class="catalog">
-    <div class="catalog__link_to_cart">All Favorite Heroes: <strong>{{ CART.length }}</strong></div>
+    <router-link :to="{name: 'Favorite Heroes', params:{ favorite_data: CART }}">
+      <div class="catalog__link_to_cart">All Favorite Heroes: <strong>{{ CART.length }}</strong></div>
+    </router-link>
+
     <div class="container-currency"
     >
 

@@ -1,17 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import Main from "../components/Main";
 import Cart from "../components/Cart";
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
+
   {
     path: '/main',
     name: 'Main',
@@ -23,6 +18,7 @@ const routes = [
     component: Cart,
     props: true
   },
+
   {
     path: '/about',
     name: 'About',
