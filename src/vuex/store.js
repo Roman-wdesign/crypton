@@ -5,10 +5,15 @@ import axios from "axios";
 import {SET_PEOPLE_TO_STATE} from './mutation-types'
 import {SET_PERSON} from './mutation-types'
 import {REMOVE_FROM_CART} from './mutation-types'
+import {INCREMENT} from './mutation-types'
+import {DECREMENT} from './mutation-types'
+
 
 import {GET_PEOPLE_FROM_API} from './mutation-types'
 import {ADD_FAVORITE_HERO} from './mutation-types'
 import {DELETE_FROM_CART} from './mutation-types'
+import {INCREMENT_CART_ITEM} from './mutation-types'
+import {DECREMENT_CART_ITEM} from './mutation-types'
 
 import {PEOPLE} from './mutation-types'
 import {CART} from './mutation-types'
@@ -49,7 +54,15 @@ let store = new Vuex.Store({
 
         [REMOVE_FROM_CART]: (state, index) => {
             state.cart.splice(index, 1)
-        }
+        },
+        [INCREMENT]:(state, index) =>{
+            state.cart[index].quantity++
+        },
+        [DECREMENT]:(state, index) =>{
+          if ( state.cart[index].quantity > 1) {
+              state.cart[index].quantity--
+          }
+        },
     },
 
     actions: {
@@ -82,7 +95,13 @@ let store = new Vuex.Store({
         },
         [DELETE_FROM_CART]({commit}, index) {
             commit('REMOVE_FROM_CART', index)
-        }
+        },
+        [INCREMENT_CART_ITEM]({commit}, index) {
+            commit('INCREMENT', index)
+        },
+        [DECREMENT_CART_ITEM]({commit}, index) {
+            commit('DECREMENT', index)
+        },
     },
 
     getters: {

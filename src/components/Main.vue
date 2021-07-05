@@ -1,31 +1,24 @@
 <template>
   <div class="main">
-
-    <Catalog/>
-<!--    <Cart-->
-<!--        v-if="CART.length"-->
-<!--        :favorite_data="CART"-->
-<!--    />-->
+    <keep-alive>
+      <Catalog/>
+    </keep-alive>
   </div>
 </template>
 <script>
 
-// import Cart from "./Cart";
+
 import Catalog from "./Catalog"
-// import {mapGetters} from "vuex"
+
 
 export default {
   name: "Main",
   components: {
-    // Cart,
     Catalog
   },
   data: () => ({}),
   watch: {},
   computed: {
-    // ...mapGetters([
-    //   'CART'
-    // ])
   }
 }
 </script>

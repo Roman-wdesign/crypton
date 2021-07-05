@@ -26,13 +26,18 @@
     </div>
     <div class="cart-item__quantity">
       <p>qty</p>
-      <strong>{{ favorite_item_data.quantity }}</strong>
+      <span>
+        <span class="quantity__btn" @click="incrementItem">+</span>
+        <strong> {{ favorite_item_data.quantity }}</strong>
+        <span class="quantity__btn" @click="decrementItem">-</span>
+      </span>
     </div>
     <button @click="deleteFromCart">Delete hero from favorite</button>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "Cart-item",
   props: {
@@ -43,9 +48,16 @@ export default {
       }
     }
   },
-  methods:{
-    deleteFromCart(){
-this.$emit('deleteFromCart')
+  methods: {
+    incrementItem() {
+      this.$emit('increment')
+    },
+    decrementItem() {
+      this.$emit('decrement')
+    },
+
+    deleteFromCart() {
+      this.$emit('deleteFromCart')
     }
   },
   mounted() {

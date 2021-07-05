@@ -2,7 +2,6 @@
   <div id="app">
     <div id="nav">
       <router-link to="/main">Main page</router-link>
-
     </div>
     <router-view/>
   </div>
