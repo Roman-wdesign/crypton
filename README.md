@@ -18,7 +18,7 @@ description: Vue + SWAPI
 
 
 
-![](.gitbook/assets/screenshot_1%20%281%29.png)
+![](.gitbook/assets/screenshot_1.png)
 
 ## Project setup
 
