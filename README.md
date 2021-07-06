@@ -22,7 +22,7 @@ Example image link [https://starwars-visualguide.com/assets/img/characters/1.jpg
 
 
 
-![](.gitbook/assets/screenshot_1.png)
+![](.gitbook/assets/screenshot_1%20%281%29.png)
 
 ## Project setup
 
