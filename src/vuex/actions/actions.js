@@ -2,6 +2,9 @@
 import axios from "axios";
 
 export default {
+    GET_SEARCH_VALUE_TO_VUEX ({commit}, value) {
+        commit('SET_SEARCH_VALUE_TO_VUEX', value)
+    },
     GET_PEOPLE_FROM_API({commit}) {
         const urlMain = 'https://swapi.dev/api'
         return axios(urlMain + '/people', {

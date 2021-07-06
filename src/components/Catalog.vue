@@ -4,7 +4,7 @@
       <div class="catalog__link_to_cart">All Favorite Heroes: <strong>{{ CART.length }}</strong></div>
     </router-link>
 
-    <div class="container-currency"
+    <div class="catalog__container_currency"
     >
 
       <CatalogItem
@@ -60,7 +60,8 @@ export default {
   computed: {
     ...mapGetters([
       'PEOPLE',
-      'CART'
+      'CART',
+     'SEARCH_VALUE'
     ]),
     pages() {
       return Math.ceil(this.PEOPLE.length / 2);

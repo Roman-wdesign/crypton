@@ -1,6 +1,6 @@
 .header{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background: $green-bg-hover;
   padding: 10px;
@@ -14,9 +14,15 @@
   }
 }
 .search-field{
+  display: flex;
   padding: 16px;
-  color: #ffffff;
-  background: #e7e7e7e7;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  right: 50px;
+
+}
+.search_btn {
+  margin-left: 16px;
+  background: transparent;
+  border: none;
 }

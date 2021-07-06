@@ -9,6 +9,7 @@ Vue.use(Vuex);
 
 let store = new Vuex.Store({
     state: {
+        searchValue:'',
         people: [],
         cart: [],
         id: String,
