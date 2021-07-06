@@ -29,6 +29,8 @@
       <button
           class="item__catalog__add_btn btn"
           @click="addFavoriteHero"
+          :isActive="isActive"
+          :disabled="!isActive"
       >
         <span class="material-icons md-18">favorite</span>
       </button>
@@ -51,7 +53,9 @@ export default {
     },
   },
 
-  data: () => ({}),
+  data: () => ({
+    isActive: true
+  }),
   computed: {},
   methods: {
     addFavoriteHero() {

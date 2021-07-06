@@ -1,0 +1,22 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $green-bg-hover;
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  img{
+    width: 50px;
+  }
+}
+.search-field{
+  padding: 16px;
+  color: #ffffff;
+  background: #e7e7e7e7;
+  position: relative;
+  right: 50px;
+}

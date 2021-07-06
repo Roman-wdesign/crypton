@@ -2,6 +2,12 @@
 @import "modules/cart";
 @import "modules/catalog";
 @import "modules/buttons";
+@import "modules/header";
+
+.main{
+  margin: 0 auto;
+
+}
 
 
 
@@ -23,7 +29,10 @@
 }
 
 #nav {
-  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5rem;
 
   a {
     &:hover{

@@ -1,6 +1,6 @@
 <template>
   <div class="cart">
-    <router-link :to="{name: 'Main'}">
+    <router-link :to="{name: 'Catalog'}">
       <div class="catalog__link_to_cart">Back to catalog</div>
     </router-link>
     <p v-if="!favorite_data.length">There are no heroes still...</p>

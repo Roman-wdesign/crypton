@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Main from "../components/Main";
 import Cart from "../components/Cart";
+import Catalog from "../components/Catalog";
 
 Vue.use(VueRouter)
 
@@ -11,6 +12,12 @@ const routes = [
     path: '/main',
     name: 'Main',
     component: Main
+  },
+  {
+    path:'/catalog',
+    name:'Catalog',
+    component: Catalog
+
   },
   {
     path: '/Favorite Heroes',
