@@ -16,6 +16,10 @@ description: Vue + SWAPI
 * Pagination
 * VueX
 
+{% hint style="info" %}
+Example image link [https://starwars-visualguide.com/assets/img/characters/1.jpg](https://starwars-visualguide.com/assets/img/characters/1.jpg)
+{% endhint %}
+
 
 
 ![](.gitbook/assets/screenshot_1.png)
