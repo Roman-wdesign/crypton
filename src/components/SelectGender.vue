@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: "select",
+  name: "SelectGender",
   props: {
     options: {
       type: Array,

@@ -3,7 +3,7 @@
     <router-link :to="{name: 'Favorite Heroes', params:{ favorite_data: CART }}">
       <div class="catalog__link_to_cart">All Favorite Heroes: <strong>{{ CART.length }}</strong></div>
     </router-link>
-    <Select
+    <SelectGender
         :selected="selected"
         :options="categories"
         @select="sortByGender"
@@ -37,13 +37,13 @@
 
 import CatalogItem from "./Catalog-item"
 import {mapActions, mapGetters} from "vuex"
-import Select from "./Select";
+import SelectGender from "./SelectGender";
 
 
 export default {
 
   name: "Catalog",
-  components: {Select, CatalogItem},
+  components: {SelectGender, CatalogItem},
 
   data: () => ({
     peoplesOnPage: 5,
