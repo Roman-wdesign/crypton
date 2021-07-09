@@ -12,7 +12,6 @@ description: Vue + SWAPI
 * Example image link [https://starwars-visualguide.com/assets/img/characters/1.jpg](https://starwars-visualguide.com/assets/img/characters/1.jpg)
 * Search
 * Adding favorite heroes \(with quantity\)
-* Save to localStorage
 * Pagination
 * Sort by gender
 * VueX
@@ -23,7 +22,7 @@ Example image link [https://starwars-visualguide.com/assets/img/characters/1.jpg
 
 
 
-![](.gitbook/assets/screenshot_1%20%281%29.png)
+![](.gitbook/assets/screenshot_1.png)
 
 ## Project setup
 
