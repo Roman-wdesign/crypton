@@ -14,6 +14,7 @@ description: Vue + SWAPI
 * Adding favorite heroes \(with quantity\)
 * Save to localStorage
 * Pagination
+* Sort by gender
 * VueX
 
 {% hint style="info" %}
